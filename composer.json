@@ -1,6 +1,6 @@
 {
-    "name": "pragmarx/version",
-    "description": "Take control over your Laravel app version",
+    "name": "uthman/version",
+    "description": "Take control over your Laravel app version. Forked from https://github.com/antonioribeiro/version",
     "keywords": [
         "laravel",
         "version",
@@ -12,7 +12,12 @@
             "name": "Antonio Carlos Ribeiro",
             "email": "acr@antoniocarlosribeiro.com",
             "role": "Creator & Designer"
-        }
+        },
+	{
+	    "name": "Othman Aladlan",
+	    "email": "othman.aladlan96@gmail.com",
+	    "role": "Contributor"
+	}
     ],
     "require": {
         "php": ">=7.0",

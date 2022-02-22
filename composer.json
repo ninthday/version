@@ -1,6 +1,6 @@
 {
-    "name": "pragmarx/version",
-    "description": "Take control over your Laravel app version",
+    "name": "uthman/version",
+    "description": "Take control over your Laravel app version. Forked from https://github.com/antonioribeiro/version",
     "keywords": [
         "laravel",
         "version",
@@ -12,17 +12,22 @@
             "name": "Antonio Carlos Ribeiro",
             "email": "acr@antoniocarlosribeiro.com",
             "role": "Creator & Designer"
-        }
+        },
+	{
+	    "name": "Othman Aladlan",
+	    "email": "othman.aladlan96@gmail.com",
+	    "role": "Contributor"
+	}
     ],
     "require": {
         "php": ">=7.0",
         "laravel/framework": ">=5.5.33",
         "pragmarx/yaml": "^1.0",
-        "symfony/process": "^3.3|^4.0|^5.0"
+        "symfony/process": "^3.3|^4.0|^5.0|^6.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~5|~6|~7|~8|~9",
-        "orchestra/testbench": "3.4.*|3.5.*|3.6.*|3.7.*|4.*|5.*|6.*"
+        "orchestra/testbench": "3.4.*|3.5.*|3.6.*|3.7.*|4.*|5.*|6.*|7.*"
     },
     "autoload": {
         "psr-4": {

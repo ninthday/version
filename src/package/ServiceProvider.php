@@ -1,19 +1,19 @@
 <?php
 
-namespace PragmaRX\Version\Package;
+namespace Ninthday\Version\Package;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
-use PragmaRX\Version\Package\Console\Commands\Absorb;
-use PragmaRX\Version\Package\Console\Commands\Commit;
-use PragmaRX\Version\Package\Console\Commands\Major;
-use PragmaRX\Version\Package\Console\Commands\Minor;
-use PragmaRX\Version\Package\Console\Commands\Patch;
-use PragmaRX\Version\Package\Console\Commands\Show;
-use PragmaRX\Version\Package\Console\Commands\Timestamp;
-use PragmaRX\Version\Package\Console\Commands\Version as VersionCommand;
-use PragmaRX\Version\Package\Support\Config;
-use PragmaRX\Version\Package\Support\Constants;
+use Ninthday\Version\Package\Console\Commands\Absorb;
+use Ninthday\Version\Package\Console\Commands\Commit;
+use Ninthday\Version\Package\Console\Commands\Major;
+use Ninthday\Version\Package\Console\Commands\Minor;
+use Ninthday\Version\Package\Console\Commands\Patch;
+use Ninthday\Version\Package\Console\Commands\Show;
+use Ninthday\Version\Package\Console\Commands\Timestamp;
+use Ninthday\Version\Package\Console\Commands\Version as VersionCommand;
+use Ninthday\Version\Package\Support\Config;
+use Ninthday\Version\Package\Support\Constants;
 use PragmaRX\Yaml\Package\Yaml;
 
 class ServiceProvider extends IlluminateServiceProvider
@@ -38,21 +38,21 @@ class ServiceProvider extends IlluminateServiceProvider
      * @var array
      */
     protected $commandList = [
-        'pragmarx.version.command' => VersionCommand::class,
+        'ninthday.version.command' => VersionCommand::class,
 
-        'pragmarx.version.commit.command' => Commit::class,
+        'ninthday.version.commit.command' => Commit::class,
 
-        'pragmarx.version.show.command' => Show::class,
+        'ninthday.version.show.command' => Show::class,
 
-        'pragmarx.version.major.command' => Major::class,
+        'ninthday.version.major.command' => Major::class,
 
-        'pragmarx.version.minor.command' => Minor::class,
+        'ninthday.version.minor.command' => Minor::class,
 
-        'pragmarx.version.patch.command' => Patch::class,
+        'ninthday.version.patch.command' => Patch::class,
 
-        'pragmarx.version.absorb.command' => Absorb::class,
+        'ninthday.version.absorb.command' => Absorb::class,
 
-        'pragmarx.version.absorb.timestamp' => Timestamp::class,
+        'ninthday.version.absorb.timestamp' => Timestamp::class,
     ];
 
     /**
@@ -129,7 +129,7 @@ class ServiceProvider extends IlluminateServiceProvider
         Blade::directive(
             $this->config->get('blade-directive', 'version'),
             function ($format = Constants::DEFAULT_FORMAT) {
-                return "<?php echo app('pragmarx.version')->format($format); ?>";
+                return "<?php echo app('ninthday.version')->format($format); ?>";
             }
         );
     }
@@ -164,7 +164,7 @@ class ServiceProvider extends IlluminateServiceProvider
      */
     protected function registerService()
     {
-        $this->app->singleton('pragmarx.version', function () {
+        $this->app->singleton('ninthday.version', function () {
             $version = new Version($this->config);
 
             $version->setConfigFileStub($this->getConfigFileStub());

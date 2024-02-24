@@ -1,6 +1,6 @@
 <?php
 
-namespace PragmaRX\Version\Package\Console\Commands;
+namespace Ninthday\Version\Package\Console\Commands;
 
 class Major extends Base
 {
@@ -24,7 +24,7 @@ class Major extends Base
     public function handle()
     {
         if ($this->checkIfCanIncrement('current', 'version')) {
-            $number = app('pragmarx.version')->incrementMajor();
+            $number = app('ninthday.version')->incrementMajor();
 
             $this->info("New major version: {$number}");
 

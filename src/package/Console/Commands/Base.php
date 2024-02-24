@@ -1,6 +1,6 @@
 <?php
 
-namespace PragmaRX\Version\Package\Console\Commands;
+namespace Ninthday\Version\Package\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
@@ -15,7 +15,7 @@ class Base extends Command
     public function displayAppVersion($format = 'full')
     {
         $this->info(
-            config('app.name').' '.app('pragmarx.version')->format($format)
+            config('app.name').' '.app('ninthday.version')->format($format)
         );
     }
 
@@ -30,7 +30,7 @@ class Base extends Command
     {
         $method = sprintf('is%sInAbsorbMode', $section = Str::studly($section));
 
-        if (app('pragmarx.version')->$method($type)) {
+        if (app('ninthday.version')->$method($type)) {
             $this->error(
                 "{$section} is in git absorb mode, cannot be incremented"
             );

@@ -1,6 +1,6 @@
 <?php
 
-namespace PragmaRX\Version\Package\Console\Commands;
+namespace Ninthday\Version\Package\Console\Commands;
 
 class Patch extends Base
 {
@@ -24,7 +24,7 @@ class Patch extends Base
     public function handle()
     {
         if ($this->checkIfCanIncrement('current', 'version')) {
-            $number = app('pragmarx.version')->incrementPatch();
+            $number = app('ninthday.version')->incrementPatch();
 
             $this->info("New patch: {$number}");
 

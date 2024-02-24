@@ -1,6 +1,6 @@
 <?php
 
-namespace PragmaRX\Version\Package\Exceptions;
+namespace Ninthday\Version\Package\Exceptions;
 
 class GitTagNotFound extends \Exception
 {

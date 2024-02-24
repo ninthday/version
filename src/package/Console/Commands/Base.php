@@ -1,6 +1,6 @@
 <?php
 
-namespace PragmaRX\Version\Package\Console\Commands;
+namespace Ninthday\Version\Package\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;

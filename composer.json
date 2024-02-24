@@ -1,5 +1,5 @@
 {
-    "name": "uthman/version",
+    "name": "ninthday/version",
     "description": "Take control over your Laravel app version. Forked from https://github.com/antonioribeiro/version",
     "keywords": [
         "laravel",
@@ -13,11 +13,16 @@
             "email": "acr@antoniocarlosribeiro.com",
             "role": "Creator & Designer"
         },
-	{
-	    "name": "Othman Aladlan",
-	    "email": "othman.aladlan96@gmail.com",
-	    "role": "Contributor"
-	}
+        {
+            "name": "Othman Aladlan",
+            "email": "othman.aladlan96@gmail.com",
+            "role": "Contributor"
+        },
+        {
+            "name": "Tuvix Shih",
+            "email": "tuvix@ninthday.me",
+            "role": "Contributor"
+        }
     ],
     "require": {
         "php": ">=7.0",
@@ -31,18 +36,18 @@
     },
     "autoload": {
         "psr-4": {
-            "PragmaRX\\Version\\Package\\": "src/package",
-            "PragmaRX\\Version\\Tests\\": "tests/"
+            "Ninthday\\Version\\Package\\": "src/package",
+            "Ninthday\\Version\\Tests\\": "tests/"
         }
     },
     "extra": {
         "component": "package",
         "laravel": {
             "providers": [
-                "PragmaRX\\Version\\Package\\ServiceProvider"
+                "Ninthday\\Version\\Package\\ServiceProvider"
             ],
             "aliases": {
-                "Version": "PragmaRX\\Version\\Package\\Facade"
+                "Version": "Ninthday\\Version\\Package\\Facade"
             }
         }
     },

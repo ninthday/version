@@ -1,9 +1,9 @@
 <?php
 
-namespace PragmaRX\Version\Package\Support;
+namespace Ninthday\Version\Package\Support;
 
 use Carbon\Carbon;
-use PragmaRX\Version\Package\Version;
+use Ninthday\Version\Package\Version;
 
 class Absorb
 {

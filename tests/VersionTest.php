@@ -1,16 +1,16 @@
 <?php
 
-namespace PragmaRX\Version\Tests;
+namespace Ninthday\Version\Tests;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Blade;
-use PragmaRX\Version\Package\Exceptions\GitTagNotFound;
-use PragmaRX\Version\Package\Exceptions\MethodNotFound;
-use PragmaRX\Version\Package\Facade as VersionFacade;
-use PragmaRX\Version\Package\Support\Constants;
-use PragmaRX\Version\Package\Version;
-use PragmaRX\Version\Package\Version as VersionService;
+use Ninthday\Version\Package\Exceptions\GitTagNotFound;
+use Ninthday\Version\Package\Exceptions\MethodNotFound;
+use Ninthday\Version\Package\Facade as VersionFacade;
+use Ninthday\Version\Package\Support\Constants;
+use Ninthday\Version\Package\Version;
+use Ninthday\Version\Package\Version as VersionService;
 
 class VersionTest extends TestCase
 {
@@ -40,7 +40,7 @@ class VersionTest extends TestCase
         $this->createGitTag();
 
         putenv(
-            'VERSION_GIT_REMOTE_REPOSITORY=https://github.com/antonioribeiro/version.git'
+            'VERSION_GIT_REMOTE_REPOSITORY=https://github.com/ninthday/version.git'
         );
 
         $this->version = VersionFacade::instance();
@@ -94,7 +94,7 @@ class VersionTest extends TestCase
 
         return static::$remoteVersion = substr(
             exec(
-                'git ls-remote https://github.com/antonioribeiro/version.git | grep tags/ | grep -v {} | cut -d \/ -f 3 | cut -d v -f 2 | sort --version-sort | tail -1'
+                'git ls-remote https://github.com/ninthday/version.git | grep tags/ | grep -v {} | cut -d \/ -f 3 | cut -d v -f 2 | sort --version-sort | tail -1'
             ),
             0,
             6

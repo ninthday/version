@@ -1,19 +1,19 @@
 <?php
 
-namespace PragmaRX\Version\Package;
+namespace Ninthday\Version\Package;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
-use PragmaRX\Version\Package\Console\Commands\Absorb;
-use PragmaRX\Version\Package\Console\Commands\Commit;
-use PragmaRX\Version\Package\Console\Commands\Major;
-use PragmaRX\Version\Package\Console\Commands\Minor;
-use PragmaRX\Version\Package\Console\Commands\Patch;
-use PragmaRX\Version\Package\Console\Commands\Show;
-use PragmaRX\Version\Package\Console\Commands\Timestamp;
-use PragmaRX\Version\Package\Console\Commands\Version as VersionCommand;
-use PragmaRX\Version\Package\Support\Config;
-use PragmaRX\Version\Package\Support\Constants;
+use Ninthday\Version\Package\Console\Commands\Absorb;
+use Ninthday\Version\Package\Console\Commands\Commit;
+use Ninthday\Version\Package\Console\Commands\Major;
+use Ninthday\Version\Package\Console\Commands\Minor;
+use Ninthday\Version\Package\Console\Commands\Patch;
+use Ninthday\Version\Package\Console\Commands\Show;
+use Ninthday\Version\Package\Console\Commands\Timestamp;
+use Ninthday\Version\Package\Console\Commands\Version as VersionCommand;
+use Ninthday\Version\Package\Support\Config;
+use Ninthday\Version\Package\Support\Constants;
 use PragmaRX\Yaml\Package\Yaml;
 
 class ServiceProvider extends IlluminateServiceProvider

@@ -1,6 +1,6 @@
 <?php
 
-namespace PragmaRX\Version\Package;
+namespace Ninthday\Version\Package;
 
 use Illuminate\Support\Facades\Facade as LaravelFacade;
 

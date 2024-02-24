@@ -24,7 +24,7 @@ class Patch extends Base
     public function handle()
     {
         if ($this->checkIfCanIncrement('current', 'version')) {
-            $number = app('pragmarx.version')->incrementPatch();
+            $number = app('ninthday.version')->incrementPatch();
 
             $this->info("New patch: {$number}");
 

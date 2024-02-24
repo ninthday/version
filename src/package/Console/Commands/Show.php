@@ -29,6 +29,6 @@ class Show extends Base
             ? ''
             : config('app.name').' ';
 
-        $this->info($appName.app('pragmarx.version')->format($format));
+        $this->info($appName.app('ninthday.version')->format($format));
     }
 }

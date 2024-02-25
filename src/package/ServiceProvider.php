@@ -14,7 +14,7 @@ use Ninthday\Version\Package\Console\Commands\Timestamp;
 use Ninthday\Version\Package\Console\Commands\Version as VersionCommand;
 use Ninthday\Version\Package\Support\Config;
 use Ninthday\Version\Package\Support\Constants;
-use PragmaRX\Yaml\Package\Yaml;
+use Ninthday\Yaml\Package\Yaml;
 
 class ServiceProvider extends IlluminateServiceProvider
 {

@@ -3,14 +3,14 @@
 namespace Ninthday\Version\Package\Support;
 
 use Illuminate\Support\Collection;
-use PragmaRX\Yaml\Package\Yaml;
+use Ninthday\Yaml\Package\Yaml;
 
 class Config
 {
     /**
      * The config loader.
      *
-     * @var \PragmaRX\Yaml\Package\Yaml
+     * @var \Ninthday\Yaml\Package\Yaml
      */
     protected $yaml;
 

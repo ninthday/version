@@ -4,7 +4,7 @@ namespace Ninthday\Version\Tests;
 
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 use Ninthday\Version\Package\ServiceProvider as VersionServiceProvider;
-use PragmaRX\Yaml\Package\ServiceProvider as YamlServiceProvider;
+use Ninthday\Yaml\Package\ServiceProvider as YamlServiceProvider;
 
 abstract class TestCase extends OrchestraTestCase
 {

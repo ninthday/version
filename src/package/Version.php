@@ -10,12 +10,12 @@ use Ninthday\Version\Package\Support\Constants;
 use Ninthday\Version\Package\Support\Git;
 use Ninthday\Version\Package\Support\Increment;
 use Ninthday\Version\Package\Support\Timestamp;
-use PragmaRX\Yaml\Package\Yaml;
+use Ninthday\Yaml\Package\Yaml;
 
 class Version
 {
     /**
-     * @var \PragmaRX\Yaml\Package\Yaml
+     * @var \Ninthday\Yaml\Package\Yaml
      */
     protected $yaml;
 
@@ -137,7 +137,7 @@ class Version
         $absorb,
         $timestamp
     ) {
-        $yaml = $this->instantiateClass($yaml ?: app('pragmarx.yaml'), 'yaml');
+        $yaml = $this->instantiateClass($yaml ?: app('ninthday.yaml'), 'yaml');
 
         $config = $this->instantiateClass($config, 'config', Config::class, [
             $yaml,
